@@ -1,20 +1,21 @@
 
-## Model visualization
+## 모델 시각화
 
-Keras provides utility functions to plot a Keras model (using `graphviz`).
+Keras는 모델을 시각화하기 위한 `graphviz`기반 유틸리티 함수들을 제공합니다.
 
-This will plot a graph of the model and save it to a file:
+아래의 코드는 모델의 그래프를 그려주고, 이미지를 파일로 저장해 줍니다.
+
 ```python
 from keras.utils import plot_model
 plot_model(model, to_file='model.png')
 ```
 
-`plot_model` takes four optional arguments:
+`plot_model`에서는 다음 네 개의 인자를 지정할 수 있습니다.
 
-- `show_shapes` (defaults to False) controls whether output shapes are shown in the graph.
-- `show_layer_names` (defaults to True) controls whether layer names are shown in the graph.
-- `expand_nested` (defaults to False) controls whether to expand nested models into clusters in the graph.
-- `dpi` (defaults to 96) controls image dpi.
+- `show_shapes` (기본값: False) controls whether output shapes are shown in the graph.
+- `show_layer_names` (기본값: True) controls whether layer names are shown in the graph.
+- `expand_nested` (기본값: False) controls whether to expand nested models into clusters in the graph.
+- `dpi` (기본값: 96) controls image dpi.
 
 You can also directly obtain the `pydot.Graph` object and render it yourself,
 for example to show it in an ipython notebook :
